@@ -81,180 +81,182 @@
 
         <!--1st vdo-->
 
-        <div class="vdo-preview">
+<!--        <div class="vdo-preview">-->
 
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="{% static 'thumbnails/mrbeast.jpg' %}">
+<!--            <div class="thumbnail-row">-->
+<!--                <img class="thumbnail" src="{% static 'thumbnails/mrbeast.jpg' %}">-->
 
-                <div class="vdo-time">10:36</div>
-            </div>
+<!--                <div class="vdo-time">10:36</div>-->
+<!--            </div>-->
 
-            <div class="vdo-info-grid">
-                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/mrbeast.jpg' %}">
-                </div>
+<!--            <div class="vdo-info-grid">-->
+<!--                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/mrbeast.jpg' %}">-->
+<!--                </div>-->
 
-                <div class="vdo-info">
+<!--                <div class="vdo-info">-->
 
-                    <p class="vdo-title">
-                        Train Vs Giant Pit</p>
-                    <p class="vdo-author"> MrBeast</p>
-                    <p class="vdo-stats">
-                        86M views &#183; 6 days ago</p>
+<!--                    <p class="vdo-title">-->
+<!--                        Train Vs Giant Pit</p>-->
+<!--                    <p class="vdo-author"> MrBeast</p>-->
+<!--                    <p class="vdo-stats">-->
+<!--                        86M views &#183; 6 days ago</p>-->
 
-                </div>
+<!--                </div>-->
 
-            </div>
+<!--            </div>-->
 
 
-        </div>
-        <!--
+<!--        </div>-->
+
         <!--2nd vdo-->
+        {% for vid in video %}
 
         <div class="vdo-preview">
 
             <div class="thumbnail-row">
-                <img class="thumbnail" src="{% static 'thumbnails/mkbhd.jpg' %}">
+                <img class="thumbnail" src="{{vid.Thumbnail.url}}">
 
-                <div class="vdo-time">12:33</div>
+                <div class="vdo-time">{{vid.video_time}}</div>
             </div>
 
             <div class="vdo-info-grid">
-                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/mkbhd.jpg' %}">
+                <div class="channel-picture"> <img class="pfp" src="{{vid.channel_pic.url}}">
                 </div>
 
                 <div class="vdo-info">
 
                     <p class="vdo-title">
-                        ios 17 Hands-On: Top 5 Features!</p>
-                    <p class="vdo-author">Marques Brownlee</p>
+                        {{vid.video_title}}</p>
+                    <p class="vdo-author">{{vid.channel_name}}</p>
                     <p class="vdo-stats">
-                        3M views &#183; 2 days ago</p>
+                        {{vid.views}}M views &#183; {{vid.days}} days ago</p>
 
                 </div>
 
             </div>
 
         </div>
-        <!--3rd vdo-->
+        {% endfor %}
+<!--        &lt;!&ndash;3rd vdo&ndash;&gt;-->
 
 
-        <div class="vdo-preview">
+<!--        <div class="vdo-preview">-->
 
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="{% static 'thumbnails/weeknd.jpg' %}">
+<!--            <div class="thumbnail-row">-->
+<!--                <img class="thumbnail" src="{% static 'thumbnails/weeknd.jpg' %}">-->
 
-                <div class="vdo-time">3:24</div>
-            </div>
+<!--                <div class="vdo-time">3:24</div>-->
+<!--            </div>-->
 
-            <div class="vdo-info-grid">
-                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/weeknd.jpg' %}">
-                </div>
+<!--            <div class="vdo-info-grid">-->
+<!--                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/weeknd.jpg' %}">-->
+<!--                </div>-->
 
-                <div class="vdo-info">
+<!--                <div class="vdo-info">-->
 
-                    <p class="vdo-title">
-                        The Weeknd - Blinding Lights (Official Audio)
-                    </p>
-                    <p class="vdo-author">The Weeknd</p>
-                    <p class="vdo-stats">
-                        755M views &#183; 3 years ago</p>
+<!--                    <p class="vdo-title">-->
+<!--                        The Weeknd - Blinding Lights (Official Audio)-->
+<!--                    </p>-->
+<!--                    <p class="vdo-author">The Weeknd</p>-->
+<!--                    <p class="vdo-stats">-->
+<!--                        755M views &#183; 3 years ago</p>-->
 
-                </div>
+<!--                </div>-->
 
-            </div>
-
-
-        </div>
-        <!--4th vdo-->
-
-        <div class="vdo-preview">
-
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="{% static 'thumbnails/mrwhothum.jpg' %}">
-
-                <div class="vdo-time">9:19</div>
-
-            </div>
-
-            <div class="vdo-info-grid">
-                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/mrwho.jpg' %}">
-                </div>
-
-                <div class="vdo-info">
-
-                    <p class="vdo-title">
-                        The Future of Smartphones with Google’s CEO</p>
-                    <p class="vdo-author">Mrwhosetheboss</p>
-                    <p class="vdo-stats">
-                        5M views &#183; 2 months ago</p>
-
-                </div>
-
-            </div>
+<!--            </div>-->
 
 
-        </div>
-        <!--5th vdo-->
+<!--        </div>-->
+<!--        &lt;!&ndash;4th vdo&ndash;&gt;-->
 
-        <div class="vdo-preview">
+<!--        <div class="vdo-preview">-->
 
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="{% static 'thumbnails/spider.jpg' %}">
+<!--            <div class="thumbnail-row">-->
+<!--                <img class="thumbnail" src="{% static 'thumbnails/mrwhothum.jpg' %}">-->
 
-                <div class="vdo-time">1:33</div>
+<!--                <div class="vdo-time">9:19</div>-->
 
-            </div>
+<!--            </div>-->
 
-            <div class="vdo-info-grid">
-                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/sony.jpg' %}">
-                </div>
+<!--            <div class="vdo-info-grid">-->
+<!--                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/mrwho.jpg' %}">-->
+<!--                </div>-->
 
-                <div class="vdo-info">
+<!--                <div class="vdo-info">-->
 
-                    <p class="vdo-title">
-                        Marvel's Spider-Man Remastered - PC Features Trailer I PC Games</p>
-                    <p class="vdo-author"> PlayStation</p>
-                    <p class="vdo-stats">
-                        1.9m views &#183; 11 months ago</p>
+<!--                    <p class="vdo-title">-->
+<!--                        The Future of Smartphones with Google’s CEO</p>-->
+<!--                    <p class="vdo-author">Mrwhosetheboss</p>-->
+<!--                    <p class="vdo-stats">-->
+<!--                        5M views &#183; 2 months ago</p>-->
 
-                </div>
+<!--                </div>-->
 
-            </div>
-
-
-        </div>
-        <!--6th vdo-->
-
-        <div class="vdo-preview">
-
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="{% static 'thumbnails/kk.jpg' %}">
-
-                <div class="vdo-time">11:05</div>
-
-            </div>
-
-            <div class="vdo-info-grid">
-                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/kk.jpg' %}">
-                </div>
-
-                <div class="vdo-info">
-
-                    <p class="vdo-title">
-                        The Most Dangerous Weapon Is Not Nuclear</p>
-                    <p class="vdo-author"> Kurzgesagt – In a Nutshell</p>
-                    <p class="vdo-stats">
-                        3.2M views &#183; 2 weeks ago</p>
-
-                </div>
-
-            </div>
+<!--            </div>-->
 
 
-        </div>
+<!--        </div>-->
+<!--        &lt;!&ndash;5th vdo&ndash;&gt;-->
 
-        <!--7th vdo-->
-        -->
+<!--        <div class="vdo-preview">-->
+
+<!--            <div class="thumbnail-row">-->
+<!--                <img class="thumbnail" src="{% static 'thumbnails/spider.jpg' %}">-->
+
+<!--                <div class="vdo-time">1:33</div>-->
+
+<!--            </div>-->
+
+<!--            <div class="vdo-info-grid">-->
+<!--                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/sony.jpg' %}">-->
+<!--                </div>-->
+
+<!--                <div class="vdo-info">-->
+
+<!--                    <p class="vdo-title">-->
+<!--                        Marvel's Spider-Man Remastered - PC Features Trailer I PC Games</p>-->
+<!--                    <p class="vdo-author"> PlayStation</p>-->
+<!--                    <p class="vdo-stats">-->
+<!--                        1.9m views &#183; 11 months ago</p>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+
+<!--        </div>-->
+<!--        &lt;!&ndash;6th vdo&ndash;&gt;-->
+
+<!--        <div class="vdo-preview">-->
+
+<!--            <div class="thumbnail-row">-->
+<!--                <img class="thumbnail" src="{% static 'thumbnails/kk.jpg' %}">-->
+
+<!--                <div class="vdo-time">11:05</div>-->
+
+<!--            </div>-->
+
+<!--            <div class="vdo-info-grid">-->
+<!--                <div class="channel-picture"> <img class="pfp" src="{% static 'channeldp/kk.jpg' %}">-->
+<!--                </div>-->
+
+<!--                <div class="vdo-info">-->
+
+<!--                    <p class="vdo-title">-->
+<!--                        The Most Dangerous Weapon Is Not Nuclear</p>-->
+<!--                    <p class="vdo-author"> Kurzgesagt – In a Nutshell</p>-->
+<!--                    <p class="vdo-stats">-->
+<!--                        3.2M views &#183; 2 weeks ago</p>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+
+<!--        </div>-->
+
+<!--        &lt;!&ndash;7th vdo&ndash;&gt;-->
+<!--        &ndash;&gt; -->
 
     </div>
 
