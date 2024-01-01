@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="videoplayer.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">My Website</a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <video id="myVideo" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="info">Channel Name</div>
+                <button id="like">Like</button>
+                <button id="subscribe">Subscribe</button>
+                <div id="comments">Comments</div>
+            </div>
+            <div class="col-md-4">
+                <!-- Other videos go here -->
+            </div>
+        </div>
+    </div>
+    <script src="videoplayer.js"></script>
+</body>
+</html>
