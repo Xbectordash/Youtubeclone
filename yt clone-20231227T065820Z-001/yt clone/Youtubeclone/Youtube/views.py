@@ -5,23 +5,6 @@ from .models import yt_attribute
 
 # Create your views here.
 def yt(request):
-
-    video = yt_attribute.objects.all()
-
-    return render(request, 'youtube.html', {'video': video})
-
-
-
-
-
-
-
-
-
-
-
-
-# one thing you have to learn how to use jinger into jinger
     # yt = yt_attribute()
     # yt.Thumbnail='mkbhd.jpg'
     # yt.video_time='12:33'
@@ -50,3 +33,9 @@ def yt(request):
     # yt2.days= 2
     #
     # video = [yt,yt1,yt2]
+
+    video = yt_attribute.objects.all()
+
+# one thing you have to learn how to use jinger into jinger
+
+    return render(request, 'youtube.html', {'video': video})
