@@ -20,5 +20,4 @@ from Youtube import views
 
 urlpatterns = [
     path('',views.yt,name='yt' ),
-
 ]
